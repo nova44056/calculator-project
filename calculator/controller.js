@@ -1,25 +1,25 @@
 window.onload = () => {
   // focus on the first number input on page load
-  document.getElementById("first_number").focus();
+  document.getElementById("inputNumberOne").focus();
 };
 
 // setup variables and get a calculator instance
-function CreateCalculator(first_number, second_number, operator) {
-  return new Calculator(first_number, second_number, operator);
+function CreateCalculator(inputNumberOne, inputNumberTwo, operator) {
+  return new Calculator(inputNumberOne, inputNumberTwo, operator);
 }
 
 // perform a calculation when the operator button is clicked
 function calculate() {
   // get first and second number
-  const first_number = parseFloat(
-    document.getElementById("first_number").value
+  const inputNumberOne = parseFloat(
+    document.getElementById("inputNumberOne").value
   );
 
-  const second_number = parseFloat(
-    document.getElementById("second_number").value
+  const inputNumberTwo = parseFloat(
+    document.getElementById("inputNumberTwo").value
   );
 
-  if (isNaN(first_number) || isNaN(second_number)) {
+  if (isNaN(inputNumberOne) || isNaN(inputNumberTwo)) {
     updateResultText("Please enter a valid number");
     // // clear the result text after 2 seconds
     setTimeout(() => updateResultText(""), 2000);
@@ -30,7 +30,7 @@ function calculate() {
   const operator = getOperator();
 
   // create a calculator instance
-  const calculator = CreateCalculator(first_number, second_number, operator);
+  const calculator = CreateCalculator(inputNumberOne, inputNumberTwo, operator);
   // do the calculation
   calculator.operate();
 
@@ -40,7 +40,7 @@ function calculate() {
   }
 
   updateResultText(
-    `The result of ${calculator.getAction()} ${first_number} and ${second_number} is ${
+    `The result of ${calculator.getAction()} ${inputNumberOne} and ${inputNumberTwo} is ${
       calculator.value
     }`
   );
@@ -56,16 +56,16 @@ function updateResultText(value) {
 
 // should clear input text values and focus the first number input
 function clearValues() {
-  // clear first_number
-  document.getElementById("first_number").value = "";
-  // clear second_number
-  document.getElementById("second_number").value = "";
+  // clear inputNumberOne
+  document.getElementById("inputNumberOne").value = "";
+  // clear inputNumberTwo
+  document.getElementById("inputNumberTwo").value = "";
 
   // reset operator to default
   document.getElementById("add").checked = true;
 
   // focus to the first number input on clearing
-  document.getElementById("first_number").focus();
+  document.getElementById("inputNumberOne").focus();
 }
 
 /**

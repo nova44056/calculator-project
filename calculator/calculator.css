@@ -29,7 +29,7 @@ body {
   font-weight: bold;
 }
 
-#equal {
+.equal {
   background-color: var(--primary-color);
   border: none;
   color: white;
@@ -39,7 +39,7 @@ body {
 
 }
 
-#clear{
+.clear{
   outline: none;
   background-color: white;
   border: none;

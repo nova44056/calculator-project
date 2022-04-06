@@ -11,17 +11,17 @@
     <div class="row">
       <div class="field">
         <label for="first_number">first number</label>
-        <input type="number" name="first_number" id="first_number" />
+        <input type="number" name="first_number" id="inputNumberOne" />
       </div>
 
       <div class="field">
         <label for="second_number">second number</label>
-        <input type="number" name="second_number" id="second_number" />
+        <input type="number" name="second_number" id="inputNumberTwo" />
       </div>
     </div>
 
     <div class="row">
-      <div class="field operator">
+      <div class="field operators">
         <input type="radio" value="add" id="add" name="operator" checked />
         <label for="add">Add</label>
       </div>
@@ -39,9 +39,9 @@
       </div>
     </div>
 
-    <div class="field">
-      <button onclick="calculate()" id="equal">=</button>
-      <button onclick="clearValues()" id="clear">Clear</button>
+    <div class="field buttons">
+      <button onclick="calculate()" class="equal">=</button>
+      <button onclick="clearValues()" class="clear">Clear</button>
     </div>
 
     <div id="result" />
