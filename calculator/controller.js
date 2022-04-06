@@ -1,8 +1,3 @@
-window.onload = () => {
-  // focus on the first number input on page load
-  document.getElementById("inputNumberOne").focus();
-};
-
 // setup variables and get a calculator instance
 function CreateCalculator(inputNumberOne, inputNumberTwo, operator) {
   return new Calculator(inputNumberOne, inputNumberTwo, operator);
@@ -63,9 +58,6 @@ function clearValues() {
 
   // reset operator to default
   document.getElementById("add").checked = true;
-
-  // focus to the first number input on clearing
-  document.getElementById("inputNumberOne").focus();
 }
 
 /**
