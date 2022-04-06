@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Calculator</title>
-        <script type="text/javascript" src="controller.js"></script>
-        <script type="text/javascript" src="calculator.js"></script>
-        <link rel="stylesheet" type="text/css" href="calculator.css" />
-    </head>
-    <body>
-        <!-- Fill in html here -->
-    </body>
+  <head>
+    <title>Calculator</title>
+    <script type="text/javascript" src="controller.js"></script>
+    <script type="text/javascript" src="calculator.js"></script>
+    <link rel="stylesheet" type="text/css" href="calculator.css" />
+  </head>
+  <body>
+    <!-- Fill in html here -->
+    <div class="row">
+      <div class="field">
+        <label for="first_number">first number</label>
+        <input type="number" name="first_number" id="first_number" />
+      </div>
+
+      <div class="field">
+        <label for="second_number">second number</label>
+        <input type="number" name="second_number" id="second_number" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="field operator">
+        <input type="radio" value="add" id="add" name="operator" checked />
+        <label for="add">Add</label>
+      </div>
+      <div class="field operator">
+        <input type="radio" value="subtract" id="subtract" name="operator" />
+        <label for="subtract">Subtract</label>
+      </div>
+      <div class="field operator">
+        <input type="radio" value="multiply" id="multiply" name="operator" />
+        <label for="multiply">Multiply</label>
+      </div>
+      <div class="field operator">
+        <input type="radio" value="divide" id="divide" name="operator" />
+        <label for="divide">Divide</label>
+      </div>
+    </div>
+
+    <div class="field">
+      <button onclick="calculate()" id="equal">=</button>
+      <button onclick="clearValues()" id="clear">Clear</button>
+    </div>
+
+    <div id="result" />
+  </body>
 </html>
